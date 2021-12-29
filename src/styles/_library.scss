@@ -1,15 +1,17 @@
 .library {
   position: fixed;
+  box-shadow: 2px 2px 50px rgb(221, 221, 221);
+  border-radius: 1rem;
   top: 0;
   left: 0;
   width: 20rem;
   height: 100%;
-  background: lightcyan;
-  box-shadow: 2px 2px 50px rgb(161, 161, 161);
   overflow: scroll;
+  background: white;
   transform: translateX(-100%);
   transition: all 0.5s ease;
   opacity: 0;
+
   h2 {
     padding: 2rem;
   }
@@ -19,16 +21,17 @@
   display: flex;
   align-items: center;
   padding: 1rem 2rem 1rem 2rem;
-  transition: background 0.5s ease;
+  cursor: pointer;
+  transition: all 0.75s ease-out;
+
   img {
     width: 30%;
   }
   &:hover {
-    background: lightblue;
+    background: rgb(235, 235, 235);
   }
 }
-
-song-description {
+.song-description {
   padding-left: 1rem;
   h3 {
     font-size: 1rem;
@@ -40,8 +43,10 @@ song-description {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+  scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
 }
+
+/* Works on Chrome/Edge/Safari */
 *::-webkit-scrollbar {
   width: 5px;
 }
@@ -49,15 +54,14 @@ song-description {
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(155, 155, 155, 0.5);
+  background-color: rgba(155, 155, 155, 0.7);
   border-radius: 20px;
   border: transparent;
 }
 
 .selected {
-  background: violet;
+  background: rgb(194, 208, 253);
 }
-
 .active-library {
   transform: translateX(0%);
   opacity: 1;
